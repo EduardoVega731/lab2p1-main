@@ -1,0 +1,143 @@
+header{
+    text-align: center;
+    background-color: #0066A2;
+    display: block;
+    padding: 10px;
+    margin: -10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* border: 15px double peachpuff; */
+}
+
+.LoginCtrl {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    text-align: right;
+    padding-right: 2px;
+}
+.LoginYes, .LoginNo {
+    display: none;
+}
+.LoginWait {
+    display: block;
+}
+/* username displaying when logged in */
+.Username {
+    color: white;
+    font-size: 20px;
+}
+/* display for todo and done numbers in list */
+#divs {
+    display: flex;
+} 
+
+#todo, #done {
+    
+    margin: auto;
+    margin-top: -20px;
+    display: block;
+    max-width: 20%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    float: right;
+}
+
+
+
+#todo p:nth-child(1), #done p:nth-child(1){
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+}
+#todo p:nth-child(2), #done p:nth-child(2){
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    /* width: 100px; */
+}
+/* styling for list number colors */
+#todo-count, #done-count{
+    background-color:#0066A2;
+    height: 35px;
+    margin-top: -21px;
+    border: 1.5px solid #0066A2;
+}
+
+
+
+#show {
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    color: red;
+}
+
+.input-submit, #show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item {
+    border-style: outset;
+    border-color: #0066A2;
+    height: 40px;
+    width: 250px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+}
+
+input[type="text"] {
+    font-size:25px;
+}
+
+#clear {
+    margin-left: 10px;
+    background: red;
+    font-size: 25px;
+    color: white;
+    border-style: outset;
+    border-color: red;
+    height: 50px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+}
+
+#clear:hover, #click:hover{
+    cursor: pointer
+}
+
+#click{
+    margin-left: 10px;
+    background: #0066A2;
+    font-size: 25px;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    height: 50px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+}
+
+
+input[type="checkbox"]:hover  {
+    cursor: pointer;
+}
+
+
+.del-btn {
+    color: lightgray;
+    display:inline;
+}
+
+.del-btn:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.don-btn {
+  cursor: pointer;
+}

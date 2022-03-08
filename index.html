@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href = "style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+</head>
+<body>
+    <header>
+        <h1 id = "banner">To-Do List</h1>
+    </header>
+        <div class="LoginCtrl">
+            <div class="LoginWait">Please wait...</div>
+            <div class="LoginNo">
+                <button onclick="myFirebase.googleLogin()">Login With Google</button>
+                <button onclick="myFirebase.githubLogin()">Login with Github</button>
+            </div>
+            <div class="LoginYes">
+                <div class="Username"></div>
+                <button onclick="myFirebase.logout()">Logout</button>
+            </div>
+        </div>
+         
+        
+        <div class="LoginWait">
+            <h2>Please wait...</h2>
+        </div>
+        <div class="LoginNo">
+            <h2>Please log in...</h2>
+        </div>
+        <div class="LoginYes">
+        <!-- PUT YOUR CONTENT HERE -->
+        <div id="divs">
+            <div id="todo">
+                <p>To-Do Count:</p>
+                <p id ="todo-count"></p>
+            </div>
+            <div id="done">
+                <p>Done Count:</p>
+                <p id = "done-count"></p>
+            </div>
+        </div>
+    
+        <div class = "input-submit">
+            <input id="item" type="text">
+            <button id ="click" type="button" onclick="getText()";>Submit</button>
+            <button id="clear" type="button" onclick="clearAll()";>Clear </button>
+        </div>
+        <div 
+            id="show">        
+        </div>
+        </div>
+          
+
+    
+    <!-- The core firebase JS SDK is always required and must be loaded first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <!-- for DB -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBvgX89vmPrVbDklj2XuuroN0lxBoTJVN0",
+            authDomain: "cs335-35afe.firebaseapp.com",
+            projectId: "cs335-35afe",
+            storageBucket: "cs335-35afe.appspot.com",
+            messagingSenderId: "793221081287",
+            appId: "1:793221081287:web:9654f2d471c458f91876e2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    
+    
+    <script src="myFirebase.js"></script>
+    <!-- for DB -->
+    <script src="myFirebaseDB.js"></script>
+    
+    <script src="todo.js"></script>
+
+    <script>
+        var myFirebase = new yFirebase(user => setupUser(user));
+    </script>
+</body>
+</html>
